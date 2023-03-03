@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../dist/style.css">
+        <link rel="stylesheet" href="zoomsl.css">
+        <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha384-JUMjoW8OzDJw4oFpWIB2Bu/c6768ObEthBMVSiIx4ruBIEdyNSUQAjJNFqT5pnJ6"crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <title>New Model</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="container__image images">
+                <div class="container__big-image big-image">
+                    <img src="/image/photo.jpg" alt="" id="zoom">
+                </div>
+                <div class="container__small-image small-images">
+                    <img src="/image/nw.jpg" alt="">
+                    <img src="/image/photo.jpg" alt="">
+                    <img src="/image/photoes.jpg" alt="">
+                </div>
+            </div>
+            <div class="container__content">
+                <h1>house for rent</h1>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     In debitis id ad qui deleniti? Consequatur consequuntur 
+                     incidunt id beatae fugiat ea provident vel nostrum dolorem dolores, 
+                     non, quisquam ullam suscipit.</P>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-alt"></i>
+                </div>
+                <div class="price">UGX300M/- <span>UGX500M/-</span></div>
+                <a href="#"><button>your home <i class="fa-solid fa-house"></i> </button></a>
+            </div>
+        </div>
+        <!--===================== script part ====================-->
+        <script src="jquery.js"></script>
+        <script src="Stylish-Magnifying-Glass-Plugin-SergeLand-Image-Zoomer/zoomsl.min.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                $('.container__small-image img').click(function(){
+                    let image = $(this).attr('src');
+                    $('.container__big-image img').attr('src', image);
+                });
+
+                $('#zoom').imagezoomsl({
+                    zoomrange: [3, 3]
+                });
+            });
+
+          </script>
+    </body>
+</html>
