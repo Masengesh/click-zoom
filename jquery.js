@@ -1,5 +1,5 @@
 $(document).ready(function() {
     $('#zoom').imagezoomsl({
-        zoomrange: [3, 3]
+        zoomrange: [4, 4]
     });
 });
